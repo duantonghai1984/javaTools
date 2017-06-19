@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE dmds:server SYSTEM "server.dtd">
+<dmds:server xmlns:dmds="http://zhongan.com/">
+	<system>
+		<property name="defaultSqlParser">druidparser</property>
+		<property name="processors">16</property>
+		<property name="processorBufferChunk">4096</property>
+		<property name="processorBufferPool">163840000</property>
+		<property name="processorExecutor">32</property>
+		<property name="sequnceHandlerType">1</property>
+		<property name="processorCheckPeriod">3000</property>
+		
+		
+		
+	
+	</system>
+
+	<user name="doc_test">
+		<property name="password">test</property>
+		<property name="schemas">duantTest</property>
+		<property name="usingDecrypt">0</property>
+		<property name="benchmark">500</property>
+	</user>
+	<user name="admin">
+		<property name="password">123</property>
+		<property name="schemas">duantTest,</property>
+	</user>
+</dmds:server>

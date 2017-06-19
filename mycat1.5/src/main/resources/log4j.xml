@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <property name="log.dir" value="/alidata1/admin/logs" />
+	<property name="projectname" value="dmds" />
+	<appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM-dd HH:mm:ss.SSS}  %5p [%t] (%F:%L) -%m%n" />
+		</layout>
+	</appender>
+	<appender name="FILE" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="../logs/dmds.log" />
+		<param name="Append" value="false" />
+		<param name="MaxFileSize" value="10000KB" />
+		<param name="MaxBackupIndex" value="10" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{MM/dd HH:mm:ss.SSS}  %5p [%t] (%F:%L) -%m%n" />
+		</layout>
+	</appender>
+	<root>
+		<level value="debug" />
+		<appender-ref ref="ConsoleAppender" />
+		<appender-ref ref="FILE" />
+	</root>
+	<logger name="com.zhongan.dmds.net.session.NonBlockingSession">
+		<level value="debug" />
+	</logger>
+	<logger name="com.zhongan.dmds.net.mysql.nio.handler.MultiNodeQueryHandler">
+		<level value="debug" />
+	</logger>
+</log4j:configuration>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?><!DOCTYPE dmds:schema SYSTEM "schema.dtd">
+<dmds:schema xmlns:dmds="http://zhongan.com/">
+
+	<schema name="duantTest" checkSQLschema="false" sqlMaxLimit="100" dataNode="dn_0">
+		<table name="travelrecord" primaryKey="id" dataNode="dn_0,dn_1" rule="duant-fenbiao"  />
+		<table name="test" primaryKey="id" dataNode="dn_0,dn_1" rule="r_duantTest_test"/>
+	</schema>
+
+	<dataNode name="dn_0" dataHost="dh_doc" database="db_0" />
+	<dataNode name="dn_1" dataHost="dh_doc" database="db_1" />
+
+	<dataHost name="dh_doc" maxCon="88" minCon="1" balance="0" writeType="0" dbType="mysql" dbDriver="native" switchType="1"
+		slaveThreshold="100">
+		<heartbeat>select 1</heartbeat>
+		<writeHost host="duantHost1" url="127.0.0.1:3306" user="root" password="root">
+		</writeHost>
+	</dataHost>
+
+</dmds:schema>

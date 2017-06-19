@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE dmds:rule SYSTEM "rule.dtd">
+<dmds:rule xmlns:dmds="http://zhongan.com/">
+
+
+   <tableRule name="duant-fenbiao">
+		<rule>
+			<columns>id</columns>
+			<algorithm>fenbiao</algorithm>
+		</rule>
+	</tableRule>
+	<tableRule name="r_duantTest_test">
+		<rule>
+			<columns>id</columns>
+			<algorithm>f_duantTest_test</algorithm>
+		</rule>
+	</tableRule>
+
+	<function name="f_duantTest_test" class="org.opencloudb.route.function.PartitionByMod">
+		<property name="count">2</property>
+	</function>
+	
+	<function name="fenbiao" class="org.opencloudb.route.function.PartitionByMod">
+		<property name="count">2</property>
+		<property name="dbCount">2</property>
+		<property name="tbCount">4</property>
+	</function>
+	
+</dmds:rule>
