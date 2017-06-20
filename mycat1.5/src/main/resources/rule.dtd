@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!ELEMENT dmds:rule (tableRule*,function*)>
-<!ATTLIST dmds:rule xmlns:dmds CDATA #FIXED "http://zhongan.com/">
+<!ATTLIST dmds:rule xmlns:dmds CDATA #FIXED "http://mycat.com/">
 
 <!ELEMENT tableRule (rule+)>
 <!ATTLIST tableRule name CDATA #REQUIRED>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!ELEMENT dmds:schema (schema*,dataNode*,dataHost*)>
-<!ATTLIST dmds:schema xmlns:dmds CDATA #FIXED "http://zhongan.com/">
+<!ATTLIST dmds:schema xmlns:dmds CDATA #FIXED "http://mycat.com/">
 
 <!ELEMENT schema (table*)>
 <!ATTLIST schema name NMTOKEN #REQUIRED>

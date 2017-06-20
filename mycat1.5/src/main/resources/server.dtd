@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!ELEMENT dmds:server (system?,user+,cluster?,quarantine?)>
-<!ATTLIST dmds:server xmlns:dmds CDATA #FIXED "http://zhongan.com/">
+<!ATTLIST dmds:server xmlns:dmds CDATA #FIXED "http://mycat.com/">
 
 <!ELEMENT system (property*) >
 
