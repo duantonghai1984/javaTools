@@ -1,7 +1,14 @@
-<?xml version="1.0"?><!DOCTYPE dmds:schema SYSTEM "schema.dtd">
-<dmds:schema xmlns:dmds="http://zhongan.com/">
+<?xml version="1.0"?>
+<!DOCTYPE mycat:schema SYSTEM "schema.dtd">
+<mycat:schema xmlns:mycat="http://org.opencloudb/" >
 
-	<schema name="duantTest" checkSQLschema="false" sqlMaxLimit="100" dataNode="dn_0">
+		<schema name="duantTest" checkSQLschema="false" sqlMaxLimit="100" dataNode="dn_0">
+		<table name="travelrecord" primaryKey="id" dataNode="dn_0,dn_1" rule="duant-fenbiao"  />
+		<table name="test" primaryKey="id" dataNode="dn_0,dn_1" rule="r_duantTest_test"/>
+	</schema>
+	
+	
+	<schema name="bill" checkSQLschema="false" sqlMaxLimit="100" dataNode="dn_0">
 		<table name="travelrecord" primaryKey="id" dataNode="dn_0,dn_1" rule="duant-fenbiao"  />
 		<table name="test" primaryKey="id" dataNode="dn_0,dn_1" rule="r_duantTest_test"/>
 	</schema>
@@ -14,6 +21,7 @@
 		<heartbeat>select 1</heartbeat>
 		<writeHost host="duantHost1" url="127.0.0.1:3306" user="root" password="root">
 		</writeHost>
+		
+		
 	</dataHost>
-
-</dmds:schema>
+</mycat:schema>
